@@ -6,7 +6,7 @@ import os
 FILE = "healthbackend/storage/history.json"
 
 
-# ------------------------------------------------------------
+# -----------------------------------------------------------
 # Load function
 # ------------------------------------------------------------
 # Purpose: Read and return the stored data from the history file.
