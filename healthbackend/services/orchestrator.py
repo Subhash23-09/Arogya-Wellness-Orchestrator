@@ -7,18 +7,18 @@ from langchain.schema import HumanMessage, SystemMessage
 
 # Quota handling
 from google.api_core import exceptions as google_exceptions
-from healthbackend.services.api_key_pool import get_next_key, mark_key_quota_exceeded
+from services.api_key_pool import get_next_key, mark_key_quota_exceeded
 
 # Import individual agent functions and supporting services
-from healthbackend.services.agents import (
+from services.agents import (
     symptom_agent,
     lifestyle_agent,
     diet_agent,
     fitness_agent,
 )
-from healthbackend.services.history_store import save_history
-from healthbackend.services.memory import get_shared_memory, reset_memory
-from healthbackend.config.settings import MODEL_NAME
+from history_store import save_history
+from services.memory import get_shared_memory, reset_memory
+from config.settings import MODEL_NAME
 
 
 def _make_synth_llm_with_key():
