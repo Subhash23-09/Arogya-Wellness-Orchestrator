@@ -1,9 +1,9 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage, SystemMessage
-from healthbackend.config.settings import MODEL_NAME
-from healthbackend.services.memory import get_shared_memory
-from healthbackend.services.rag import retrieve_context
-from healthbackend.services.api_key_pool import get_next_key, mark_key_quota_exceeded
+from config.settings import MODEL_NAME
+from services.memory import get_shared_memory
+from services.rag import retrieve_context
+from services.api_key_pool import get_next_key, mark_key_quota_exceeded
 from google.api_core import exceptions as google_exceptions
 
 
