@@ -2,13 +2,13 @@ import asyncio
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from healthbackend.services.user_profile_store import save_profile, get_profile
-from healthbackend.services.orchestrator import orchestrate
-from healthbackend.services.history_store import get_history
-from healthbackend.utils.exceptions import AuthError, InputError, AgentError
-from healthbackend.services.user_auth_store import check_credentials
-from healthbackend.config.settings import GOOGLE_API_KEY, MODEL_NAME
-from healthbackend.services.user_auth_store import check_credentials, create_user
+from services.user_profile_store import save_profile, get_profile
+from services.orchestrator import orchestrate
+from services.history_store import get_history
+from utils.exceptions import AuthError, InputError, AgentError
+from services.user_auth_store import check_credentials
+from config.settings import GOOGLE_API_KEY, MODEL_NAME
+from services.user_auth_store import check_credentials, create_user
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage, SystemMessage
 
