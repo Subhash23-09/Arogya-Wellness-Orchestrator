@@ -16,7 +16,7 @@ from services.agents import (
     diet_agent,
     fitness_agent,
 )
-from history_store import save_history
+from services.history_store import save_history
 from services.memory import get_shared_memory, reset_memory
 from config.settings import MODEL_NAME
 
